@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мотоциклы - Все о мотоциклах</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav {
+            margin: 20px 0;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: #555;
+        }
+
+        section {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        .motorcycle-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .motorcycle {
+            flex: 1 1 calc(33.333% - 20px);
+            background: #e9ecef;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .motorcycle:hover {
+            transform: scale(1.05);
+        }
+
+        .motorcycle img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Мотоциклы</h1>
+        <nav>
+            <a href="#news">Новости</a>
+            <a href="#reviews">Отзывы</a>
+            <a href="#contact">Контакты</a>
+        </nav>
+    </header>
+
+    <section id="news">
+        <h2>Последние новости</h2>
+        <p>Оставайтесь в курсе последних событий в мире мотоциклов.</p>
+        <ul>
+            <li>Новая модель мотоцикла XYZ поступила в продажу!</li>
+            <li>Как выбрать первый мотоцикл?</li>
+            <li>Обзор мотоцикла ABC: стоит ли покупать?</li>
+        </ul>
+    </section>
+
+    <section id="motorcycles">
+        <h2>Популярные мотоциклы</h2>
+        <div class="motorcycle-list">
+            <div class="motorcycle">
+                <h3>Honda CB650R</h3>
+                <img src="https://cdn.bikez.com/img/imgdb/detail/172899.jpg" alt="Honda CB650R">
+                <p>Мощный мотоцикл с отличной управляемостью.</p>
+            </div>
+            <div class="motorcycle">
+                <h3>Kawasaki Ninja 650</h3>
+                <img src="https://cdn.bikez.com/img/imgdb/detail/169649.jpg" alt="Kawasaki Ninja 650">
+                <p>Спортивный мотоцикл для любителей скорости.</p>
+            </div>
+            <div class="motorcycle">
+                <h3>Yamaha MT-07</h3>
+                <img src="https://cdn.bikez.com/img/imgdb/detail/166644.jpg" alt="Yamaha MT-07">
+                <p>Идеальный выбор для городских условий.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews">
+        <h2>Отзывы</h2>
+        <p>Почитайте, что говорят наши пользователи о мотоциклах.</p>
+        <ul>
+            <li>"Honda CB650R — отличный мотоцикл для начинающих!" - Иван</li>
+            <li>"Yamaha MT-07 — это настоящий адреналин!" - Анна</li>
+            <li>"Kawasaki Ninja 650 — мой любимый мотоцикл!" - Сергей</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Контакты</h2>
+        <p>Если у вас есть вопросы, свяжитесь с нами:</p>
+        <p>Email: contact@moto-example.com</p>
+        <p>Телефон: +7 (999) 123-45-67</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Все права защищены.</p>
+    </footer>
+
+</body>
+
+</html>

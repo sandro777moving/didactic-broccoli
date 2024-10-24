@@ -1,13 +1,194 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Мой сайт</title>
+    <title>Сайт-визитка</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            animation: fadeIn 1s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        header {
+            background: #007bff;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        nav {
+            margin: 20px 0;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        section {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        h1 {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #007bff;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact {
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .button:hover {
+            background: #218838;
+        }
+
+        .form-container {
+            margin-top: 20px;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .loading.active {
+            display: block;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Добро пожаловать на мой сайт!</h1>
-    <p>Это моя первая веб-страница, созданная в Visual Studio Code.</p>
+
+    <header>
+        <h1>Добро пожаловать на мой сайт!</h1>
+        <nav>
+            <a href="#about">Обо мне</a>
+            <a href="#skills">Навыки</a>
+            <a href="#contact">Контакты</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>Обо мне</h2>
+        <p>Меня зовут Алекс, я веб-разработчик с опытом работы более 5 лет. Я люблю создавать красивые и
+            функциональные сайты.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Навыки</h2>
+        <ul>
+            <li>HTML & CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>PHP</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Контакты</h2>
+        <p>Email: alex@example.com</p>
+        <p>Телефон: +7 (999) 123-45-67</p>
+
+        <div class="form-container">
+            <h3>Отправить сообщение</h3>
+            <form id="contactForm">
+                <input type="text" placeholder="Ваше имя" required />
+                <input type="email" placeholder="Ваш email" required />
+                <textarea placeholder="Ваше сообщение" required></textarea>
+                <button type="submit" class="button">Отправить</button>
+            </form>
+            <div class="loading hidden">Отправка...</div>
+            <div class="success hidden">Сообщение отправлено!</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Алекс. Все права защищены.</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const loading = document.querySelector('.loading');
+            const success = document.querySelector('.success');
+
+            loading.classList.add('active');
+
+            // Эмуляция отправки данных (задержка в 2 секунды)
+            setTimeout(() => {
+                loading.classList.remove('active');
+                success.classList.remove('hidden');
+                this.reset(); // Сброс формы
+            }, 2000);
+        });
+    </script>
+
 </body>
+
 </html>
